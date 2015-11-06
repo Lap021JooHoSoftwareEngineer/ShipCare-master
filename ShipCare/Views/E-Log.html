@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script src="../Libraries/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../Libraries/AngularJs/angular.min.js"></script>
+    <script src="../Controllers/ShipPerformanceKPI.js"></script>
+    <script src="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.js"></script>
+
+
+    <link rel="stylesheet" href="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.css" />
+    <style>
+        body { /*Performance와 중복*/
+            background-color: #f2f2f2;
+        }
+
+        #page_body { /*Performance와 중복*/
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        div.ui.teal.left.aligned.header { /*Performance와 중복*/
+            font-size: 22px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .ui.top.attached.tabular.menu .active.item {
+            color: #2185d0 !important;
+        }
+
+        #column_second {
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <article id="page_body" class="ui stackable divone column centered grid">
+        <div class="column">
+            <div class="ui teal left aligned header">
+                E-LOG
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui secondary pointing menu">
+                <a class="active item" style="border-color:#2185d0 !important;">
+                    Machinery Part
+                </a>
+                <div class="right menu">
+                    <i style="padding-top:9px;">
+                        e-Record > &nbsp;
+                    </i>
+
+                    <a class="ui item" style="padding-left:0;">
+                        <sapn style="color:#2185d0;"> Machinert Part</sapn>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="column_second" class="column">
+            <div class="column">
+                <div class="ui stackable divone column centered grid">
+                    <div class="row">
+                        <div class="three wide column">
+                            Group
+                        </div>
+                        <div class="five wide column">
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="gender">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">A Group</div>
+                                <div class="menu">
+                                    <div class="item" data-value="1">Male</div>
+                                    <div class="item" data-value="0">Female</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="three wide column">
+                            Vessel Name
+                        </div>
+                        <div class="five wide column">
+                            <div class="five wide column">
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="gender">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">PAN BONA</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="1">Male</div>
+                                        <div class="item" data-value="0">Female</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three wide column">
+                            Date (UTC)
+                        </div>
+                        <div class="thirteen wide column">
+                            <div class="ui basic icon button">2015-10-25</div>
+                            <button class="ui basic icon button"><i class="calendar icon"></i></button>
+                            <button class="ui basic icon button">07:06 <i class="wait icon"></i></button>
+                            ~
+                            <!--<div class="ui input"><input type="text" placeholder="2015-10-25"></div>-->
+                            <div class="ui basic icon button">2015-10-25</div>
+                            <button class="ui basic icon button"><i class="calendar icon"></i></button>
+                            <button class="ui basic icon button">07:06 <i class="wait icon"></i></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="three wide column">
+
+                        </div>
+                        <div class="thirteen wide column">
+                            <button class="ui basic button">3 hour</button>
+                            <button class="ui basic button">6 hour</button>
+                            <button class="ui basic button">12 hour</button>
+                            <button class="ui basic button">24 hour</button>
+                            |
+                            <button class="ui basic button">7 day</button>
+                            <button class="ui basic button">30 day</button>
+                            |
+                            <button class="ui basic button">3 month</button>
+                            <button class="ui basic button">6 month</button>
+                            <button class="ui basic button">12 month</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="column_second" class="column">
+            
+                <div class="ui top attached tabular stackable menu">
+                    <a class="item active" data-tab="first">Main Engine</a>
+                    <a class="item" data-tab="second">Generator</a>
+                    <a class="item" data-tab="third">Boiler</a>
+                    <a class="item" data-tab="first">Ice chamber</a>
+                    <a class="item" data-tab="second">Tank</a>
+                    <a class="item" data-tab="third">Combustion Pressure</a>
+                    <a class="item" data-tab="first">Mass Flowmeter</a>
+                    <a class="item" data-tab="second">Shaft Torque</a>
+                </div>
+                <div class="ui bottom attached tab segment active" data-tab="first" >
+                    <div style="overflow:auto;">
+                        <table class="ui single line celled table" >
+                            <thead>
+                                <tr>
+                                    <th>DATE(UTC)</th>
+                                    <th>DATE(LMT)</th>
+                                    <th>Engine No.</th>
+                                    <th>Engine speed<br />(rpm)</th>
+                                    <th>Running<br />(Y/N)</th>
+                                    <th>Shaft power<br />(kW)</th>
+                                    <th>Shaft torque<br /> (kN·m)</th>
+                                    <th>Shaft thrust <br />(kN)</th>
+                                    <th>Fuel oil flow rate<br />(m3/h)</th>
+                                    <th>Fuel oil flow rate<br />(m3/h)</th>
+                                    <th>탭제목</th>
+                                    <th>탭제목</th>
+                                    <th>탭제목</th>
+                                    <th>탭제목</th>
+                                    <th>탭제목</th>
+                                    <th>탭제목</th>
+                                </tr>
+                                </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2015-11-01 05:00:00</td>
+                                    <td>2015-11-01 14:00:00 +9.0</td>
+                                    <td>1</td>
+                                    <td>67.28</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1523</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="second">
+                        Second
+                    </div>
+                    <div class="ui bottom attached tab segment" data-tab="third">
+                        Third
+                    </div>
+                    </div>
+                    
+            </div>
+    </article>
+</body>
+</html>

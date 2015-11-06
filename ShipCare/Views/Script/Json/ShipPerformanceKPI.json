@@ -1,0 +1,14 @@
+﻿[
+  {
+    "laden": "SeaTrial",
+    "speed_change": "12.32",
+    "fuel_consumption": "35.1",
+    "avg_RPM": "72.58"
+  },
+  {
+    "laden": "Current",
+    "speed_change": "12.25",
+    "fuel_consumption": "35.8",
+    "avg_RPM": "72.58"
+  }
+]

@@ -1,0 +1,38 @@
+﻿[
+  {
+    "Callsign": "BuyFlowers",
+    "color": "red"
+  },
+  {
+    "Callsign": "Get Shoes",
+    "color": "blue"
+  },
+  {
+    "Name": "Collect Tickets",
+    "Callsign": "black"
+  },
+  {
+    "Name": "Call Joe",
+    "Callsign": "purple"
+  },
+  {
+    "Name": "test1",
+    "Callsign": "orange"
+  },
+  {
+    "Name": "BoNA",
+    "Callsign": "empty"
+  },
+  {
+    "Name": "SHIPNAME",
+    "Callsign": "yellow"
+  },
+  {
+    "Name": "Interesting",
+    "Callsign": "pink"
+  },
+  {
+    "Name": "Discussion",
+    "Callsign": "green"
+  }
+]

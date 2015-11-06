@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html ng-app="SHIP_PF_KPI">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script src="../Libraries/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../Libraries/AngularJs/angular.min.js"></script>
+    <script src="../Controllers/ShipPerformanceKPI.js"></script>
+    <script src="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.js"></script>
+
+
+    <link rel="stylesheet" href="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.css" />
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        #page_body { 
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        div.ui.teal.left.aligned.header {
+            font-size: 22px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        div.ui.right.floated.segment, div.ui.left.floated.segment {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+        }
+
+            div.ui.right.floated.segment div {
+                padding: 0;
+            }
+
+        h4 {
+            margin: 0;
+        }
+
+        .ui.divider {
+            background-color: cornflowerblue;
+            border-top: 3px solid rgba(34,36,38,.15);
+            position: relative;
+            bottom: 5px;
+        }
+
+        table.ui.very.basic.table > thead {
+            background-color: #00B5AD;
+            color: white;
+        }
+
+        /*div.ui.left.aligned.header.content_header {
+            background-color: #00B5AD;
+            padding: 5px 45px 5px 5px;
+            width: 260px;
+        }*/
+    </style>
+
+
+</head>
+<body ng-controller="SHIP_PF_KPI_Ctrl">
+    <article id="page_body" class="ui stackable one column centered grid">
+        <div class="column">
+            <div class="ui teal left aligned header">
+                SHIP PERFORMANCE KPI <!--<sup>TM</sup>-->
+            </div>
+            <!--<div class="ui right floated segment">
+                <i class="angle double left big icon"></i>
+                <i class="angle double right big icon"></i>
+            </div>-->
+            <p></p>
+            <div class="ui segment">
+                <h4>Analysys Condition</h4>
+                <div class="ui divider"></div>
+                <div class="ui stackable five column centered grid">
+                    <div class="eight wide column">
+                        <label>2015-10-23 12:00</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label>2014-10-23 12:00</label>
+                    </div>
+                    <div class="two wide column">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="example1" />
+                            <label>Check Box1</label>
+                        </div>
+                    </div>
+                    <div class="two wide column">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="example2" />
+                            <label>Check Box2</label>
+                        </div>
+                    </div>
+                    <div class="two wide column">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="example3" />
+                            <label>Check Box3</label>
+                        </div>
+                    </div>
+                    <div class="two wide column">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="example4" />
+                            <label>Check Box4</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="column">
+
+            <table class="ui fixed single line celled table">
+                <thead>
+                    <tr>
+                        <th>Laden</th>
+                        <th>선속변화<br />at 35.77 MT</th>
+                        <th>연료소모량<br />at 12.25 Kn</th>
+                        <th>평균RPM<br />at 12.25 Kn</th>
+                        <th>선속저하율</th>
+                        <th>연료소모증가율<br />at 12.25 Kn</th>
+                        <th>EVDI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sea Trial</td>
+                        <td>12.32 Knots</td>
+                        <td>35.1 MT/Day</td>
+                        <td>72.58</td>
+                        <td rowspan="2">0.07 Knots / 0.6% </td>
+                        <td rowspan="2">1.97%</td>
+                        <td rowspan="2">2.750<br />C Class</td>
+                    </tr>
+                    <tr>
+                        <td>Current</td>
+                        <td>12.25 Knots</td>
+                        <td>35.8 MT/Day</td>
+                        <td>73.22</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+        <div class="column">
+
+            <div class="ui left aligned header content_header">
+                <i class="plug icon"></i>
+                Delivery & Dock Interval
+            </div>
+            <table class="ui fixed single line celled table">
+                <tbody>
+                    <tr>
+                        <td>Vessel Delivery Date </td>
+                        
+                        <td>2010-08-31</td>
+                        <td>Months since latest Hull-cleaning</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Months since latest dry-docking </td>
+                        <td>6</td>
+                        <td>Months since latest propellar cleaning </td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+        <div class="column">
+            <div class="ui left aligned header content_header">
+                <i class="plug icon"></i>
+                KPI
+            </div>
+        </div>
+    </article>
+    <article id="page_body" class="ui stackable three column centered grid">
+        <div class="column">
+            <div class="ui segment">SPEED-FOC 3% 그래프1</div>
+        </div>
+        <div class="column">
+            <div class="ui segment">SPEED-RPM 그래프2</div>
+        </div>
+        <div class="column">
+            <div class="ui segment">SPEED-DROP 그래프3</div>
+        </div>
+        <div class="column">
+            <div class="ui segment">M/E TORQUE RICH그래프4</div>
+        </div>
+        <div class="column">
+            <div class="ui segment">FOC TREND 그래프5</div>
+        </div>
+        <div class="column">
+            <div class="ui segment">SUMMARY GOOD</div>
+        </div>
+    </article>
+</body>
+</html>

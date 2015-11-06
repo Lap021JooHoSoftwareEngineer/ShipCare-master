@@ -1,0 +1,47 @@
+﻿@font-face {
+    font-family: Lab_Font20;
+    src: url(/Views/Fonts/Lab_Font20.eot);
+    src: local(※), url(/Views/Fonts/Lab_Font20.woff) format('woff');
+}
+
+@font-face {
+    font-family: Lab_Font40;
+    src: url(/Views/Fonts/Lab_Font40.eot);
+    src: local(※), url(/Views/Fonts/Lab_Font40.woff) format('woff');
+}
+
+@font-face {
+    font-family: Lab_Font60;
+    src: url(/Views/Fonts/Lab_Font60.eot);
+    src: local(※), url(/Views/Fonts/Lab_Font60.woff) format('woff');
+}
+
+@font-face {
+    font-family: Lab_Font_Heavy;
+    src: url(/Views/Fonts/ArcaMajora-Heavy.otf);
+    src: local(※), url(/Views/Fonts/ArcaMajora-Heavy.woff) format('woff');
+}
+
+.Lab_Font20{
+    font-family:Lab_Font20;
+    line-height:2.5em;
+    font-size:10pt;
+}
+
+.Lab_Font40{
+    font-family:Lab_Font40;
+     line-height:2.5em;
+    font-size:10pt;
+}
+
+.Lab_Font60{
+    font-family:Lab_Font40;
+     line-height:2.5em;
+    font-size:10pt;
+}
+
+.Lab_Font_Heavy{
+    font-family:Lab_Font_Heavy;
+     line-height:2.5em;
+    font-size:10pt;
+}

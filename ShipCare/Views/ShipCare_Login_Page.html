@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">-->
+
+    <title></title>
+
+    <script src="../../Libraries/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../../Libraries/Semantic-UI-2.1.4/dist/semantic.min.js"></script>
+    <script src="Script/Login.js"></script>
+
+    <link rel="stylesheet" href="../../Libraries/Semantic-UI-2.1.4/dist/semantic.min.css" />
+    <link rel="stylesheet" href="Styles/Login.css" />
+
+
+
+</head>
+<body>
+    <div style="background-color:black;">
+        <!-- background image -->
+        <img class="bg" src="" alt="Not found" />
+        <!-- background image End-->
+    </div>
+
+    <!-- login -->
+    <section class="ui middle aligned center aligned grid">
+        <!-- top(basic) or middle or bottom / aligned:top, aligend:left, grid:left_top -->
+        <article class="column">
+            <form class="ui large left form">
+                <!-- <div class="ui stacked segment">--> <!-- border white -->
+                <!--<div class="field">
+                    <div class="ui facebook submit button">
+                        <div class="ui small comments"><i class="facebook self icon"></i></div>
+                    </div>
+                    <div class="ui twitter submit button">
+                        <div class="ui small comments"><i class="twitter self icon"></i></div>
+                    </div>
+                    <div class="ui google plus submit button">
+                        <div class="ui small comments"><i class="google plus icon"></i></div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui small comments">또는 이메일을 통해</div>
+                </div>-->
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" id="email" placeholder="아이디 또는 이메일">
+                    </div>
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" id="password" placeholder="비밀번호">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div id="login" class="ui blue fluid large submit button">
+                        <div class="ui small comments">로그인</div>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div class="ui error message"></div>
+            </form>
+
+            <div class="ui message">
+                회원가입 안하셨나요? &nbsp;&nbsp;&nbsp; <a href="#">회원가입</a>
+            </div>
+
+            <div class="ui bigsmall comments"><a id="loginfailurelink" href="#"><u>사용자 이름이나 비밀번호를 잊으셨나요?</u></a></div>
+        </article>
+    </section>
+
+    <footer id="footer">
+        <div class="ui comments" style="color:white; position:absolute; right:30px;">
+            <a class="information" href="#">이용약관</a> / <a class="information" href="#">개인정보취급방침</a> / <a class="information" href="#">회사소개</a>
+        </div>
+    </footer>
+    <!-- login End-->
+</body>
+</html>

@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="../Libraries/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../Libraries/AngularJs/angular.min.js"></script>
+    <script src="../Controllers/ShipPerformanceKPI.js"></script>
+    <script src="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.js"></script>
+
+    <link rel="stylesheet" href="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.css" />
+    <style>
+        body{
+            background-color: #f2f2f2; /*Performance와 중복*/
+        }
+
+        #page_body { /*Performance와 중복*/
+            background-color: #f2f2f2;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        div.ui.teal.left.aligned.header { /*Performance와 중복*/
+            font-size: 22px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .self_input{
+            background-color:lightgreen;
+        }
+
+        #border-left{
+            border-left:1px solid rgba(34,36,38,0.1);
+        }
+    </style>
+</head>
+<body>
+    <article id="page_body" class="ui stackable one column centered grid">
+        <div class="column">
+            <div class="ui teal left aligned header">
+                PRE-VOYAGE PLANNING
+            </div>
+        </div>
+        <div class="five wide column">
+            <table class="ui fixed single line celled table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Port Name</th>
+                        <th>Time Zone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Departure</td>
+                        <td class="self_input">Busan</td>
+                        <td class="self_input">9</td>
+                    </tr>
+                    <tr>
+                        <td>Destination</td>
+                        <td class="self_input">Vancouver</td>
+                        <td class="self_input">1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Time Diff</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Sailing Distance</td>
+                        <td class="self_input">5000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Weather Factor</td>
+                        <td class="self_input">-0.1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Current Factor</td>
+                        <td class="self_input">-0.1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Correction Factor</td>
+                        <td class="self_input">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="eleven wide column">
+            <div class="ui segment" style="height:327px;">그래프(segment class없애고 height를 마춰서 그래프에 설정한다.)</div>
+        </div>
+        <div class="column">
+            <table class="ui fixed single line celled table">
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Voyage Order<br />(Operation Team)</td>
+                        <td colspan="2">Budget</td>
+                        <td colspan="4">Schedule</td>
+                        <td colspan="2">Operation Cost</td>
+                        <td>Cargo</td>
+                        <td>Ballast</td>
+                    </tr>
+                    <tr>
+                        <td id="border-left">Budget Speed<br /> (knots)</td>
+                        <td>Budget FOC<br />(M/T)</td>
+                        <td>ETCD</td>
+                        <td>Required Time<br />Arrival (Lay/Can) </td>
+                        <td>ETA Margin<br />(hour)</td>
+                        <td>RTA-ETA Margin</td>
+                        <td>Charterage<br />(USD/DAY)</td>
+                        <td>Bunker Price<br />(USD/MT)</td>
+                        <td>Car Unit</td>
+                        <td>Displacement</td>
+                    </tr>
+                    <tr class="self_input">
+                        <td id="border-left">15</td>
+                        <td>30</td>
+                        <td>2015-06-28 16:00</td>
+                        <td>2015-07-13 22:05</td>
+                        <td>5</td>
+                        <td>2015-07-13 09:05</td>
+                        <td>18,000</td>
+                        <td>360</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <table class="ui fixed single line celled table">
+                <tbody>
+                    <tr>
+                        <td rowspan="17">Voyage Planing<br />(Operation Team & Ship)</td>
+                        <td>Speed</td>
+                        <td>Corrected<br />Speed</td>
+                        <td>Sailing<br />Hours</td>
+                        <td>FOC/Day<br />(Ton)</td>
+                        <td>Time Exp.<br />(A)</td>
+                        <td>Fuel Cost (B)</td>
+                        <td>Total Cost <br />(A) + (B)</td>
+                        <td>ETA (LT)</td>
+                        <td>Actual Time<br />Margin(Day)</td>
+                        <td>Budget 기준<br />Saving Cost</td>
+                    </tr>
+                    <tr>
+                        <td id="border-left">20.0</td>
+                        <td>19.8</td>
+                        <td>252.5</td>
+                        <td>62.9</td>
+                        <td>662.0</td>
+                        <td>189.394</td>
+                        <td>238.314</td>
+                        <td>427.708</td>
+                        <td>2015-07-09 12:31</td>
+                        <td>-4.4</td>
+                        <td>-27.708</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <table class="ui fixed single line celled table">
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Recommend<br />Voyage Plan</td>
+                        <td>Intended Basic<br />Speed<br />(knots)</td>
+                        <td>Intended <br />Budget Speed<br />(knots)</td>
+                        <td>Sailing Hours</td>
+                        <td>FOC / Day <br />(Ton)</td>
+                        <td>Total FOC<br />(Ton)</td>
+                        <td>Time Exp<br />(A)</td>
+                        <td>Fuel Cost<br />(B)</td>
+                        <td>Total Cost<br />(A) + (B)</td>
+                        <td>ETA (LT)</td>
+                        <td>Actual Time<br />Margin(Day)</td>
+                        <td>Budget 기준<br />Saving Cost</td>
+                    </tr>
+                    <tr>
+                        <td id="border-left">15.0</td>
+                        <td>14.8</td>
+                        <td>337.8</td>
+                        <td>24.0</td>
+                        <td>337.8</td>
+                        <td>253.378.4</td>
+                        <td>121.616</td>
+                        <td>374.994</td>
+                        <td>2015-07-13 10:50</td>
+                        <td>-0.8</td>
+                        <td>25006</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</article>
+</body>
+</html>

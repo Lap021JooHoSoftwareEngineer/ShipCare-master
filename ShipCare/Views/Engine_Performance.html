@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="../Libraries/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../Libraries/AngularJs/angular.min.js"></script>
+    <script src="../Controllers/ShipPerformanceKPI.js"></script>
+    <script src="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.js"></script>
+
+
+    <link rel="stylesheet" href="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.css" />
+    <style>
+        body{
+            background-color: #f2f2f2; /*Performance와 중복*/
+        }
+
+        #page_body { /*Performance와 중복*/
+            
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        div.ui.teal.left.aligned.header { /*Performance와 중복*/
+            font-size: 22px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        #column_header{
+            padding-bottom:0;
+        }
+
+        #column_second{
+            padding-top:0;
+        }
+    </style>
+</head>
+<body>
+    <article id="page_body" class="ui stackable divone column centered grid">
+        <div class="column">
+            <div class="ui teal left aligned header">
+                ENGINE PERFORMANCE
+            </div>
+        </div>
+        <div id="column_header" class="four wide column">
+            Group 
+            <div class="ui selection dropdown">
+                <input type="hidden" name="gender">
+                <i class="dropdown icon"></i>
+                <div class="default text">A Group</div>
+                <div class="menu">
+                    <div class="item" data-value="1">Male</div>
+                    <div class="item" data-value="0">Female</div>
+                </div>
+            </div>
+        </div>
+        <div id="column_header" class="four wide column">
+            Vessel Name
+            <div class="ui selection dropdown">
+                <input type="hidden" name="gender">
+                <i class="dropdown icon"></i>
+                <div class="default text">PAN BONA</div>
+                <div class="menu">
+                    <div class="item" data-value="1">Male</div>
+                    <div class="item" data-value="0">Female</div>
+                </div>
+            </div>
+        </div>
+        <div id="column_header" class="four wide column">
+            Monitoring Part
+            <div class="ui selection dropdown">
+                <input type="hidden" name="gender">
+                <i class="dropdown icon"></i>
+                <div class="default text">Monitoring Part</div>
+                <div class="menu">
+                    <div class="item" data-value="1">Male</div>
+                    <div class="item" data-value="0">Female</div>
+                </div>
+            </div>
+        </div>
+        <div id="column_second" class="ten wide column">
+            <div class="ui celled grid">
+                <div class="row">
+                    <div class="column">
+                        Speed / Power / RPM
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        2
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        SFOC / Cyl.Exh.Temp('C)<br />
+                        Exh. Before turbine('C) / Exh. After turbine('C)<br />
+                        T/C RPM / Pscav(mBar)<br />
+                        아이콘도 들어가야됨
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div id="column_second"  class="six wide column">
+            <div class="ui celled grid">
+                <div class="row">
+                    <div class="column">
+                        Propeller Curve
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        Hull Resistance
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        Fuel Status
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        Fuel ROB (MT)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

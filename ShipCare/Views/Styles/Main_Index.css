@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.fade_page, section#List {
+    position: relative;
+    padding-top: 10px;
+    top:2.86em;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 2.89em);
+    opacity: 1;
+}
+
+.fade_page.ng-enter,
+.fade_page.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+
+}
+
+.fade_page.ng-enter {
+    left: 100%;
+}
+
+.fade_page.ng-enter-active {
+    left: 0;
+}
+
+.fade_page.ng-leave {
+    left: 0;
+}
+
+.fade_page.ng-leave-active {
+    left: -100%;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+article.ui.inverted.vertical.menu{
+    position: absolute;
+    height: calc(100%);
+    top:2.86em;
+    padding: 0;
+    margin: 0;
+    border:0;
+    border-radius:0;
+    width:45px;
+}
+
+/*article.ui.inverted.vertical.menu > a.item{
+    height:37px;
+    border-radius:0;
+}
+
+article#ShipMenu{
+    width:213px;
+    z-index:9999;
+}*/
+
+/*.ui.secondary.inverted.pointing.menu{
+    border:0;
+}
+
+.ui.secondary.inverted.pointing.menu .active.item{
+    border-right-color:orange;
+    border-right-width:7px;
+    margin-right:-5px;
+}
+
+div.ui.inverted.secondary.vertical.pointing.menu > a.item{
+    font-size:15px;
+}
+
+section.ui.attached.segment.pushable{
+    position:absolute;
+    height:calc(100% - 2.89em);
+    width:100%;
+    top:2.86em;
+    bottom: 3.0em;
+    border:0;
+    border-radius:0;
+}
+
+article.pusher{
+    height:100%;
+    padding:0;
+    background-color:#F2F2F2;
+}*/

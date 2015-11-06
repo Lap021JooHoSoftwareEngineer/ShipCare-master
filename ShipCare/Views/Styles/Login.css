@@ -1,0 +1,66 @@
+﻿body {
+    background-color: #DADADA;
+}
+
+body > .grid {
+    height: 100%;
+}
+
+.column {
+    max-width: 450px;
+}
+
+
+img.bg{
+    min-height:100%;
+    min-width:1024px;
+    width:100%;
+    height:auto;
+    position:fixed;
+    top:0;
+    left:0;
+    -webkit-filter: blur(5px); /*이부분은 나중 삭제 포토샾작업*/
+}
+
+@media screen and (max-width:1024px){
+    img.bg{
+        left:50%;
+        margin-left: -512px;
+
+    }
+
+}
+
+#email,
+#password{
+    height:45px;
+    font-size:10pt;
+}
+
+#loginfailurelink, .information,
+div.ui.small.comments{
+    color:white;
+}
+
+div.column{
+    width:400px;
+}
+
+.ui.facebook.submit.button, .ui.twitter.submit.button, .ui.google.plus.submit.button{
+    width:32%;
+}
+
+.ui.facebook.submit.button{
+    position:absolute;
+    left:0px;
+}
+
+.ui.twitter.submit.button{
+    position:center;
+    left:0px;
+}
+
+.ui.google.plus.submit.button{
+    position:absolute;
+    right:0px;
+}

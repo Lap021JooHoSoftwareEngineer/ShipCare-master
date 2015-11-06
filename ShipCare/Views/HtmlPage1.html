@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="SHIPCARE_PRO">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../Libraries/Semantic-UI-2.1.4/dist/semantic.min.css" />
+
+    <script src="../Libraries/AngularJs/angular.min.js"></script>
+    <script>
+        angular.module("SHIPCARE_PRO", []);
+    </script>
+    <script src="../Controllers/ShipCarePro.js"></script>
+</head>
+
+<body ng-controller="SHIPCARE_PRO_Ctrl">
+    <table class="ui basic table" ng-repeat="item in data.list">
+        <tr>
+            <td>{{item.Callsign}}</td>
+            <td>{{item.Name}}</td>
+        </tr>
+    </table>
+
+   
+</body>
+</html>
